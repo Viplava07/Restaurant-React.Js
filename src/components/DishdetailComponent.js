@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap'
 
-class Dishdetails extends Component {
+class Dishdetail extends Component {
   constructor(props) {
     super(props)
   }
@@ -17,18 +17,20 @@ class Dishdetails extends Component {
 
   renderDish(dish) {
     return (
-      <div className='row'>
-        <div className='col-12 col-md-5 m-1'>
-          <Card>
-            <CardImg top src={dish.image} alt={dish.name} />
-            <CardBody>
-              <CardTitle className='font-weight-bolder text-left'>{dish.name}</CardTitle>
-              <CardText className='text-left'>{dish.description}</CardText>
-            </CardBody>
-          </Card>
-        </div>
-        <div className='col-12 col-md-5 m-1'>
-          { this.renderComments(dish.comments) }
+      <div className='container'>
+        <div className='row'>
+          <div className='col-12 col-md-5 m-1'>
+            <Card>
+              <CardImg top src={dish.image} alt={dish.name} />
+              <CardBody>
+                <CardTitle className='font-weight-bolder text-left'>{dish.name}</CardTitle>
+                <CardText className='text-left'>{dish.description}</CardText>
+              </CardBody>
+            </Card>
+          </div>
+          <div className='col-12 col-md-5 m-1'>
+            { this.renderComments(dish.comments) }
+          </div>
         </div>
       </div>
     )
@@ -65,4 +67,4 @@ class Dishdetails extends Component {
   }
 }
 
-export default Dishdetails
+export default Dishdetail;
